@@ -1,0 +1,2 @@
+1.PassSet receives {"username":"sjsidjain" , "password":"hello"} as input from view to set password for username.
+2.PassCheck receives {"username":"sjsidjain" , "password":"hello"} as input to check the password for username.
