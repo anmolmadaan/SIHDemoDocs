@@ -55,12 +55,14 @@ public class RestDemo extends HttpServlet {
 	    JSONParser parser = new JSONParser();
 	    JSONObject joUser = new JSONObject();
         String username="";
+	String password="";
         String requiredProject = "";
         try
 	    {
 	    	//creating JSONObject out of JSON formatted String
 	      joUser = (JSONObject) parser.parse(sb.toString());
 	      username= joUser.get("username").toString();
+	      //password= joUser.get("password").toString();
 	      //requiredProject = joUser.get("myProject").toString();
 
 	    } catch (Exception e) { e.printStackTrace(); }
@@ -90,6 +92,22 @@ public class RestDemo extends HttpServlet {
       //rdb.insertProjects();
     //PrintWriter out = response.getWriter();
 	//out.println(obj.toJSONString());
+
+
+       //for update/insert password
+       /*	
+	RestDemoBean rdb = new RestDemoBean();
+	rdb.updatePass(username,password);
+       */
+
+	//for checking password
+	/*
+	RestDemoBean rdb = new RestDemoBean();
+	rdb.getDocument(username);
+	boolean res=rdb.checkPass(password);
+	PrintWriter out = response.getWriter();
+    	out.println(res);
+	*/
 	}
 
 }
